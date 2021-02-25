@@ -45,3 +45,7 @@ Route::get('users/{id}/friends', function ($id) {
 
 });
 
+Route::get('users/{id?}', function ($id = 'fallbackId') {
+
+});
+
