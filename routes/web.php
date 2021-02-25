@@ -14,17 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Hello, World';
 });
 
-Route::get('about', function () {
-    return view('about');
+Route::post('/', function () {
+    // POST 요청에 대한 처리를 담당하는 라우트
 });
 
-Route::get('products', function () {
-    return view('products');
+Route::put('/', function () {
+    // PUT 요청에 대한 처리를 담당하는 라우트
 });
 
-Route::get('servieces', function () {
-    return view('servieces');
+Route::delete('/', function () {
+    // DELETE 요청에 대한 처리를 담당하는 라우트
 });
+
+Route::any('/', function () {
+    // 요청 메서드에 관계없이 해당 요청을 처리하는 라우트
+});
+
+Route::match(['get', 'post'], '/', function () {
+    // GET 또는 POST인 요청에 대해서만 처리하는 라우트
+});
+
+
