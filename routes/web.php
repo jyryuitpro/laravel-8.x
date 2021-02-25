@@ -41,4 +41,7 @@ use App\Http\Controllers\WelcomeController;
 
 Route::get('/', [WelcomeController::class, 'index']);
 
+Route::get('users/{id}/friends', function ($id) {
+
+});
 
