@@ -37,4 +37,8 @@ Route::match(['get', 'post'], '/', function () {
     // GET 또는 POST인 요청에 대해서만 처리하는 라우트
 });
 
+use App\Http\Controllers\WelcomeController;
+
+Route::get('/', [WelcomeController::class, 'index']);
+
 
